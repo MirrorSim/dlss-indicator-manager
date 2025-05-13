@@ -35,7 +35,7 @@ set "line4=     | |  | | |    \___ \\___ \    | | | '_ \ / _` | |/ __/ _` | __/ 
 set "line5=     | |__| | |____\___) |___) |  _| |_| | | | (_| | | (_| (_| | || (_) | |   "
 set "line6=     |_____/|______|____/_____/  |_____|_| |_|\__,_|_|\___\__,_|\__\___/|_|   "
 set "line7=                                                                              "
-set "line8=                                 by mirrorsim - v1.1                              "
+::set "line8=                                 by mirrorsim - v1.1                              "
 
 ::: ADMIN PRIVILEGES CHECK
 :: Request admin rights required for registry modification
@@ -72,7 +72,7 @@ echo. !line4!
 echo. !line5!
 echo. !line6!
 echo. !line7!
-echo. !line8!
+::echo. !line8!
 echo %RESET%
 echo:      _________________________________________________________________________
 echo.
