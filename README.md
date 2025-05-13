@@ -10,21 +10,22 @@ A utility to control the NVIDIA DLSS overlay that displays technical information
 - Works with all NVIDIA GPUs supporting DLSS technology
 - Simple interface with clear status indicators
 - Requires administrator privileges (for registry modifications)
+- Nvidia GPU Checker (a warning pops up if it detects a non-Nvidia GPU)
 
 ## What is the DLSS indicator?
 
-The DLSS indicator is an overlay that appears in the bottom-left corner of the screen when DLSS is active. It displays technical information such as:
+The DLSS indicator is an official overlay which appears in the bottom-left corner of the screen when DLSS is active. It displays technical information such as:
 - DLL version in use
 - Current mode (Quality, Balanced, Performance, Ultra Performance)
 - Source and output (upscaled) resolutions
 - Active preset (A, B, C, D, E, F, J, K)
-- Frame generation stats (when enabled, appears in the top-left corner)
+- Frame generation stats (when enabled - appears in the top-left corner)
 
 ## System Requirements
 
 - Windows 10/11
-- NVIDIA GPU with DLSS capability
-- Latest NVIDIA drivers installed
+- NVIDIA RTX GPU
+- Fairly recent NVIDIA drivers installed
 
 ## Installation
 
