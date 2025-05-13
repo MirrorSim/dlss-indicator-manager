@@ -13,7 +13,7 @@ color 07
 title NVIDIA DLSS Indicator Manager - Version 1.1
 
 :: Configure console appearance
-mode con: cols=90 lines=35
+mode con: cols=85 lines=35
 
 :: Setup colored text output
 for /F %%a in ('echo prompt $E^| cmd /q') do set "ESC=%%a"
