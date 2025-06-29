@@ -154,7 +154,7 @@ echo.
 :: Set registry value to enable indicator (0x400/1024)
 reg add "HKLM\SOFTWARE\NVIDIA Corporation\Global\NGXCore" /v "ShowDlssIndicator" /t REG_DWORD /d 0x400 /f >nul 2>&1
 if %errorLevel% equ 0 (
-    echo %GREEN%   [SUCCESS] %RESET%DLSS indicator enabled successfully!%RESET%
+    echo %GREEN%   [SUCCESS] %RESET%DLSS indicator enabled successfully!
     echo.
     echo    The DLSS overlay will now appear in supported games.
 ) else (
@@ -182,7 +182,7 @@ echo.
 :: Set registry value to disable indicator (0x0/0)
 reg add "HKLM\SOFTWARE\NVIDIA Corporation\Global\NGXCore" /v "ShowDlssIndicator" /t REG_DWORD /d 0x0 /f >nul 2>&1
 if %errorLevel% equ 0 (
-    echo %GREEN%   [SUCCESS] DLSS indicator disabled successfully!%RESET%
+    echo %GREEN%   [SUCCESS] %RESET%DLSS indicator disabled successfully!
     echo.
     echo    The DLSS overlay will no longer appear in games.
 ) else (
