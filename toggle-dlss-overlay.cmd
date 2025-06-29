@@ -1,5 +1,5 @@
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-:: NVIDIA DLSS Indicator Manager - Version 1.1
+:: NVIDIA DLSS Indicator Manager - Version 1.3
 :: Created by: mirrorsim
 :: 
 :: Description:
@@ -10,7 +10,7 @@
 @echo off
 setlocal EnableDelayedExpansion
 color 07
-title NVIDIA DLSS Indicator Manager - Version 1.1
+title NVIDIA DLSS Indicator Manager - Version 1.3
 
 :: Configure console appearance
 mode con: cols=85 lines=35
@@ -35,7 +35,7 @@ set "line4=     | |  | | |    \___ \\___ \    | | | '_ \ / _` | |/ __/ _` | __/ 
 set "line5=     | |__| | |____\___) |___) |  _| |_| | | | (_| | | (_| (_| | || (_) | |   "
 set "line6=     |_____/|______|____/_____/  |_____|_| |_|\__,_|_|\___\__,_|\__\___/|_|   "
 set "line7=                                                                              "
-::set "line8=                                 by mirrorsim - v1.1                              "
+::set "line8=                                 by mirrorsim - v1.3                              "
 
 ::: ADMIN PRIVILEGES CHECK
 :: Request admin rights required for registry modification
@@ -131,16 +131,22 @@ echo.
 :: Menu options
 echo                            [%GREEN%1%RESET%] Enable DLSS indicator
 echo                            [%GREEN%2%RESET%] Disable DLSS indicator
-echo                            [%GREEN%3%RESET%] Info
-echo                            [%RED%4%RESET%] Exit
+echo                            [%GREEN%3%RESET%] Refresh status
+echo                            [%GREEN%4%RESET%] Info
+echo                            [%RED%5%RESET%] Exit
 echo.
-choice /C 1234 /N /M "Select an option [%GREEN%1%RESET%-%GREEN%4%RESET%]: "
+choice /C 12345 /N /M "Select an option [%GREEN%1%RESET%-%RED%5%RESET%]: "
 ::: PROCESS MENU SELECTION
 :: Navigate based on user choice (must check highest to lowest due to errorlevel behavior)
-if errorlevel 4 goto exit
-if errorlevel 3 goto info
+if errorlevel 5 goto exit
+if errorlevel 4 goto info
+if errorlevel 3 goto refresh
 if errorlevel 2 goto disable
 if errorlevel 1 goto enable
+
+::: REFRESH STATUS
+:refresh
+goto menu
 
 ::: ENABLE DLSS INDICATOR
 :enable
