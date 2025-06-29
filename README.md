@@ -45,8 +45,10 @@ This utility modifies the Windows Registry to control the DLSS indicator visibil
 
 ## Screenshots
 
+<!-- 
 ### Main Menu
-![Main Menu](https://github.com/mirrorsim/dlss-indicator-manager/raw/main/screenshots/main-menu.png)
+![Main Menu](https://github.com/mirrorsim/dlss-indicator-manager/raw/main/screenshots/main-menu.png) 
+-->
 
 ### Indicator Enabled
 ![Indicator Enabled](https://github.com/mirrorsim/dlss-indicator-manager/raw/main/screenshots/indicator-enabled.png)
