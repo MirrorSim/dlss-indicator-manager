@@ -12,6 +12,16 @@ A utility to control the NVIDIA DLSS overlay that displays technical information
 - Requires administrator privileges (for registry modifications)
 - Nvidia GPU Checker (a warning pops up if it detects a non-Nvidia GPU)
 
+## Usage
+
+There are two ways to use this script:
+1. **Run this command on Powershell (as administrator):**  
+```
+$temp = "$env:TEMP\toggle-dlss.cmd"; iwr -useb "https://raw.githubusercontent.com/MirrorSim/dlss-indicator-manager/main/toggle-dlss-overlay.cmd" -OutFile $temp; & $temp; Remove-Item $temp
+```
+
+2. **Download the latest release from the [Releases](https://github.com/mirrorsim/dlss-indicator-manager/releases) page and run it**
+
 ## What is the DLSS indicator?
 
 The DLSS indicator is an official overlay which appears in the bottom-left corner of the screen when DLSS is active. It displays technical information such as:
@@ -26,12 +36,6 @@ The DLSS indicator is an official overlay which appears in the bottom-left corne
 - Windows 10/11
 - NVIDIA RTX GPU
 - Fairly recent NVIDIA drivers installed
-
-## Installation
-
-1. Download the latest release from the [Releases](https://github.com/mirrorsim/dlss-indicator-manager/releases) page
-2. Extract the file to a location of your choice
-3. Run `toggle-dlss-overlay.cmd` as administrator
 
 ## How It Works
 
