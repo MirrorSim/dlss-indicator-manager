@@ -17,7 +17,7 @@ A utility to control the NVIDIA DLSS overlay that displays technical information
 There are two ways to use this script, so choose one:
 A. **Run this command on Powershell (as administrator):**  
 ```
-$temp = "$env:TEMP\toggle-dlss.cmd"; iwr -useb "https://raw.githubusercontent.com/MirrorSim/dlss-indicator-manager/main/toggle-dlss-overlay.cmd" -OutFile $temp; & $temp; Remove-Item $temp
+iwr https://raw.githubusercontent.com/MirrorSim/dlss-indicator-manager/main/toggle-dlss-overlay.cmd -o ($p=$env:TEMP+'\p.cmd');&$p;del $p
 ```
 
 B. **Download the latest release from the [Releases](https://github.com/mirrorsim/dlss-indicator-manager/releases) page and run it**
